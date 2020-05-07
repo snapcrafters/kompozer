@@ -2,7 +2,11 @@ name: kompozer
 version: "0.8"
 summary: KompoZer
 description: |
-  A wysiwyg HTML editor that uses the Mozilla Composer codebase
+  KompoZer is a WYSIWYG HTML editor, with strict and transitional DTD, HTML4.01, XHTML 1.0, and CSS 2.0 support.
+  
+  KompoZer has not been in active development since 2010, and the latest version is KompoZer 0.8 beta 3 using the Gecko 1.8.1 engine. It is still usable for mostly offline Web development and design, with partial support for more modern standards. This snaps preserves the last available version, allows KompoZer to be used on modern operating systems.
+  
+  This snap is maintained by the Snapcrafters community, and is not necessarily endorsed or officially maintained by the upstream developers.
 
 grade: stable
 confinement: strict
@@ -26,11 +30,9 @@ parts:
       - libgdk-pixbuf2.0-0
       - libglib2.0-0
       - libgtk2.0-0
-      #- libidl-2-0
       - libnspr4
       - libnss3
       - libpango1.0-0
-      #- libpng16-16
       - libstdc++6
       - libx11-6
       - libxft2
@@ -103,18 +105,17 @@ plugs:
     interface: content
     target: $SNAP/share/icons
 
-
 apps:
   kompozer:
     command: usr/lib/kompozer/kompozer-bin
     plugs:
       - home
       - removable-media
-      #- network
       - desktop
       - desktop-legacy
       - x11
       - unity7
+      # - network
     environment:
       GTK_EXE_PREFIX: $SNAP/usr
       GTK_DATA_PREFIX: $SNAP
