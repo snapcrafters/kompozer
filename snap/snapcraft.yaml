@@ -2,17 +2,14 @@ name: kompozer
 version: "0.8"
 summary: KompoZer
 description: |
-  This is a snap of KompoZer
+  A wysiwyg HTML editor that uses the Mozilla Composer codebase
 
 grade: stable
 confinement: strict
 base: core18
 
-#layout:
-#  usr/share/kompozer/defaults/syspref:
-#  symlink: $SNAP/etc/kompozer/pref  
-#  usr/share/kompozer/defaults/profile:
-#  symlink: $SNAP/etc/kompozer/profile
+architectures:
+  - build-on: amd64
 
 parts:
   kompozer-main:
