@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=KompoZer
+Comment=A wysiwyg HTML editor that uses the Mozilla Composer codebase
+Icon=${SNAP}/meta/gui/kompozer.png
+Exec=kompozer
+Terminal=false
